@@ -46,7 +46,7 @@ public class Prac1_Term_4 {
             String line;
             while ((line = buff.readLine()) != null) { // reads in line by line if its not empty
                 String[] input = line.split(";"); // splits the lines that had ";" in it
-                var inputSchool = new School(input[0], input[1], input[2], input[3]); // adds object into a variable
+                School inputSchool = new School(input[0], input[1], input[2], input[3]); // adds object into a variable
                 Schools.add(inputSchool);  // add the variable into the ArrayList
             }
 
@@ -171,7 +171,7 @@ public class Prac1_Term_4 {
         S.read_file();
 
         try {
-            PrintWriter Write = new PrintWriter("Schools.txt"); // print writer is used to create and write if no files
+            PrintWriter Write = new PrintWriter("Output.txt"); // print writer is used to create and write if no files
             // with the same name is there ,if there is , it overwrite the file
             Write.println("The Schools extracted from The CSV File");
             for (int i = 0; i < S.Schools.size(); i++) {  // for loop to write to file
